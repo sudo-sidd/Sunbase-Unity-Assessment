@@ -1,0 +1,16 @@
+# Unity generated
+Library/
+Temp/
+Logs/
+UserSettings/
+
+# Auto-generated project files
+*.csproj
+*.sln
+*.slnx
+
+# IDE
+.vs/
+.idea/
+
+Builds/

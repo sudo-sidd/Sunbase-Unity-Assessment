@@ -20,7 +20,7 @@ A Unity project containing two assessment tasks demonstrating UI development, AP
 ## Demo
 
 
-[https://github.com/user-attachments/assets/demo_T2.mp4](https://github.com/user-attachments/assets/9dd2f849-b76c-49e9-bdc4-dbdfac0a62a3)
+[https://github.com/user-attachments/assets/demo_T1.mp4](https://github.com/user-attachments/assets/93203d23-d02b-4122-a51c-8f00e56cf3b6)
 > 📹 If the video doesn't play inline, [click here to watch demo_T1.mp4](demo_T1.mp4)
 
 **Scene:** `Assets/Project/Scenes/Task1.unity`
@@ -78,7 +78,7 @@ GET https://qa.sunbasedata.com/sunbase/portal/api/assignment.jsp?cmd=client_data
 # Task 2 - Line Drawing Game
 
 ## Demo
-[https://github.com/user-attachments/assets/demo_T1.mp4](https://github.com/user-attachments/assets/93203d23-d02b-4122-a51c-8f00e56cf3b6)
+[https://github.com/user-attachments/assets/demo_T2.mp4](https://github.com/user-attachments/assets/9dd2f849-b76c-49e9-bdc4-dbdfac0a62a3)
 
 
 > 📹 If the video doesn't play inline, [click here to watch demo_T2.mp4](demo_T2.mp4)
@@ -112,7 +112,12 @@ A 2D game where the player draws lines with the mouse to hit randomly spawned ta
 ### Architecture
 ```
 Scripts/
-└── LineGameManager.cs    # Handles spawning, drawing, collision detection, restart
+├── Core/
+│   └── GameController.cs    # Orchestrates game flow, handles restart
+└── Gameplay/
+    ├── CircleSpawner.cs     # Spawns target circles with animations
+    ├── LineDrawer.cs        # Handles line drawing input and rendering
+    └── HitDetector.cs       # Detects and destroys hit targets
 ```
 
 ### Input
@@ -134,15 +139,20 @@ Assets/Project/
 │   ├── Task1.unity               # Client List scene
 │   └── Task2.unity               # Line Drawing Game scene
 └── Scripts/
+    ├── Core/
+    │   └── GameController.cs
     ├── Data/
     │   └── ClientModels.cs
+    ├── Gameplay/
+    │   ├── CircleSpawner.cs
+    │   ├── HitDetector.cs
+    │   └── LineDrawer.cs
     ├── Services/
     │   └── ClientService.cs
-    ├── UI/
-    │   ├── ClientListManager.cs
-    │   ├── ClientPopup.cs
-    │   └── ClientRow.cs
-    └── LineGameManager.cs
+    └── UI/
+        ├── ClientListManager.cs
+        ├── ClientPopup.cs
+        └── ClientRow.cs
 ```
 
 ---

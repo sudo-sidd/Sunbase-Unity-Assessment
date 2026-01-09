@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Sunbase-Unity-Assessment-Task-2.sln"
+    "dotnet.defaultSolution": "Sunbase-Unity-Assessment.sln"
 }

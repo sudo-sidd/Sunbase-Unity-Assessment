@@ -20,6 +20,7 @@ public class LineDrawer : MonoBehaviour
 
     private List<Vector2> linePoints = new List<Vector2>();
     private bool isDrawing = false;
+    private Vector2 lastPoint;
 
     private void Update()
     {
@@ -51,17 +52,20 @@ public class LineDrawer : MonoBehaviour
     {
         isDrawing = true;
         linePoints.Clear();
+        lastPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         UpdateLineVisuals();
     }
 
     private void ContinueDrawing()
     {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
+        Vector2 smoothedPos = Vector2.Lerp(lastPoint, currentMousePos, 0.5f);
 
-        // Only add point if mouse moved enough (optimization)
-        if (linePoints.Count == 0 || Vector2.Distance(linePoints[linePoints.Count - 1], mousePos) > minPointDistance)
+        if (Vector2.Distance(lastPoint, smoothedPos) > 0.05f)
         {
-            linePoints.Add(mousePos);
+            linePoints.Add(smoothedPos);
+            lastPoint = smoothedPos;
             UpdateLineVisuals();
         }
     }

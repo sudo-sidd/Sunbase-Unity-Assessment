@@ -18,10 +18,9 @@ A Unity project containing two assessment tasks demonstrating UI development, AP
 # Task 1 - Client List with API Integration
 
 ## Demo
+[https://github.com/user-attachments/assets/demo_T1.mp4](https://github.com/user-attachments/assets/9dd2f849-b76c-49e9-bdc4-dbdfac0a62a3)
 
-
-[https://github.com/user-attachments/assets/demo_T1.mp4](https://github.com/user-attachments/assets/93203d23-d02b-4122-a51c-8f00e56cf3b6)
-> 📹 If the video doesn't play inline, [click here to watch demo_T1.mp4](demo_T1.mp4)
+> 📹 If the video doesn't play inline, [click her2 to watch demo_T1.mp4](demo_T1.mp4)
 
 **Scene:** `Assets/Project/Scenes/Task1.unity`
 
@@ -78,8 +77,7 @@ GET https://qa.sunbasedata.com/sunbase/portal/api/assignment.jsp?cmd=client_data
 # Task 2 - Line Drawing Game
 
 ## Demo
-[https://github.com/user-attachments/assets/demo_T2.mp4](https://github.com/user-attachments/assets/9dd2f849-b76c-49e9-bdc4-dbdfac0a62a3)
-
+[https://github.com/user-attachments/assets/demo_T2.mp4](https://github.com/user-attachments/assets/93203d23-d02b-4122-a51c-8f00e56cf3b6)
 
 > 📹 If the video doesn't play inline, [click here to watch demo_T2.mp4](demo_T2.mp4)
 
